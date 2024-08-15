@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Multi-task learning with object point cloud representations enable strong generalization in dexterous manipulation.">
+  <meta name="keywords" content="Dexterous Manipulation, Reinforcement Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>D-MASTER: Mask Annealed Transformer for
+    Unsupervised Domain Adaptation in Breast
+    Cancer Detection from Mammograms</title>
+
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<style>
+  .logo-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+  }
+  .logo-container img {
+      border: none;
+      width: 160px; /* Set the width you want */
+      height: auto; /* Maintain aspect ratio */
+  }
+  .content-between-logos {
+      flex: 1;
+      text-align: center;
+  }
+  .publication-details, .publication-links {
+      margin: 10px 0;
+  }
+</style>
+
+<body>
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title"><b>HF-Fed</b>: Hierarchical Based Customized Federated Learning Framework for X-Ray Imaging</h1>
+                    <h3 class="title is-4 conference-authors">
+                        <div class="logo-container">
+                            <a target="_blank" href="https://conferences.miccai.org/2024/en/">
+                                <img src="static/images/miccai2023-logo.png" alt="MICCAI 2024">
+                            </a>
+                            <div class="content-between-logos">
+                                <div class="publication-details">
+                                    <div class="is-size-5 publication-authors">
+                                        <span class="author-block">
+                                            <a href="https://www.tajamulashraf.com/">Tajamul Ashraf</a><sup>1</sup>,</span>
+                                        <span class="author-block">
+                                            <a href="https://www.linkedin.com/in/tisha-madame/?originalSubdomain=in">Tisha Madame</a><sup>1</sup>,
+                                        </span>
+                                    </div>
+                                    <div class="is-size-5 publication-authors">
+                                        <span class="author-block"><sup>1</sup>Indian Institute of Technology Delhi,</span>
+                                    </div>
+                                </div>
+                                <div class="publication-links">
+                                    <span class="link-block">
+                                        <a href="https://arxiv.org/abs/2407.06585v1" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fas fa-file-pdf"></i>
+                                            </span>
+                                            <span>Paper</span>
+                                        </a>
+                                    </span>
+                                    <span class="link-block">
+                                        <a href="https://github.com/Tajamul21/HF-Fed" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fab fa-github"></i>
+                                            </span>
+                                            <span>Code</span>
+                                        </a>
+                                    </span>
+                                    <span class="link-block">
+                                        <a href="https://arxiv.org/abs/2407.06585v1" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="ai ai-arxiv"></i>
+                                            </span>
+                                            <span>arXiv</span>
+                                        </a>
+                                    </span>
+                                    <span class="link-block">
+                                        <a href="https://drive.google.com/drive/folders/1GT_1mkL2L_xcEA14375VSci2vQBWDh_h?usp=drive_link" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fa fa-database"></i>
+                                            </span>
+                                            <span>Data</span>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://deep-breath-miccai.github.io/#">
+                                <img src="static/images/Deep-Breath-logo.png" alt="Deep Breath">
+                            </a>
+                        </div>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                In clinical applications, <b>X-Ray</b> technology plays a crucial
+                role in noninvasive examinations like mammography, providing essential anatomical information about
+                patients. However, the inherent radiation risk associated with X-Ray procedures raises significant
+                concerns.
+                <b>X-Ray</b> reconstruction is crucial in medical imaging for creating detailed
+                visual representations of internal structures, and facilitating diagnosis
+                and treatment without invasive procedures. Recent advancements in deep
+                learning (<b>DL</b>) have shown promise in <b>X-Ray</b> reconstruction. Nevertheless,
+                conventional DL methods often necessitate the centralized aggregation of
+                substantial large datasets for training, following specific scanning protocols. This requirement
+                results in notable domain shifts and privacy issues.
+                To address these challenges, we introduce the Hierarchical Framework based Federated Learning method
+                (HF-Fed) for customized <b>X-Ray</b> Imaging. <b>HF-Fed</b> addresses the challenges in X-Ray imaging optimization by
+                decomposing the problem into two components: local data adaptation
+                and holistic X-Ray Imaging. It employs a hospital-specific hierarchical
+                framework and a shared common imaging network called Network of
+                Networks (<b>NoN</b>) for these tasks. The emphasis of the NoN is on acquiring
+                stable features from a variety of data distributions. A hierarchical hypernetwork extracts
+                domain-specific hyperparameters, conditioning the NoN
+                for customized X-Ray reconstruction. Experimental results demonstrate
+              <b>HF-Fed’s</b> competitive performance, offering a promising solution for enhancing X-Ray imaging without the
+                need for data sharing. This study
+                significantly contributes to the evolving body of literature on the potential advantages of federated
+                learning in the healthcare sector. It offers
+                valuable insights for policymakers and healthcare providers holistically</p>
+            </div>
+          </div>
+        </div>
+        <!--/ Abstract. -->
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <!-- Overview -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3"><b>HF-Fed</b> Architecture</h2>
+          <div class="content has-text-justified">
+            <p>
+              We introduce the Hierarchical Framework based Federated Learning method (HF-Fed) for customized X-Ray
+              Imaging. HF-Fed addresses the challenges in X-Ray imaging optimization by
+              decomposing the problem into two components: local data adaptation
+              and holistic X-Ray Imaging. It employs a hospital-specific hierarchical
+              framework and a shared common imaging network called Network of
+              Networks (NoN) for these tasks. The emphasis of the NoN is on acquiring
+              stable features from a variety of data distributions. A hierarchical hypernetwork extracts
+              domain-specific hyperparameters, conditioning the NoN
+              for customized X-Ray reconstruction.<br>
+              <br>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Overview -->
+      <div class="columns is-centered">
+        <img src="./static/images/arch.png" width="750" />
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container is-max-widescreen">
+        <!-- Overview -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Network of Networks (NoN)</h2>
+            <div class="content has-text-justified">
+              <p>
+                In this research, we propose HF-Fed, a hypernetwork-based federated learning
+                framework designed to tackle the non-iid challenge in X-Ray image reconstruction. Similar to FedAvg and
+                FedProx, HF-Fed involves local updates for both the
+                hypernetwork and imaging network, with only the imaging network’s updates
+                aggregated on the server. Unlike FedBN, which normalizes data globally, HF-Fed
+                adapts by performing local normalization due to varied X-Ray data distributions from different
+                machines, challenging FedBN’s assumptions [21]. To address
+                this, we introduce a hypernetwork to modulate feature maps within the imaging
+                network, enabling hierarchical-driven self-normalization
+              </p>
+            </div>
+          </div>
+        </div class="columns is-centered">
+        <!--/ Overview -->
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-dark">
+    <div class="hero-body">
+      <div class="container is-max-widescreen">
+        <!-- Training Videos -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Quantitative Results</h2>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h3 class="title is-4"></h3>
+            <div class="columns is-centered">
+              <img src="./static/images/table1.png" width="900" />
+            </div>
+            <div class="content has-text-justified">
+              <P>Table 1 demonstrates that FL-based methods significantly improve
+                performance with larger datasets, mitigating the non-iid problem. HF-Fed consistently delivers high
+                performance across different dataset sizes, enhancing imaging quality effectively. All methods benefit
+                from larger training samples, with
+                HF-Fed remaining competitive. Our hypernetwork uses X-Ray geometry parameters to modulate feature maps,
+                balancing stability and imaging performance,
+                proving effective in achieving consistent and competitive result
+              </P>
+
+
+            </div>
+
+
+
+
+          </div>
+
+        </div>
+  </section>
+
+
+  <section class="hero is-dark">
+    <div class="hero-body">
+      <div class="container is-max-widescreen">
+        <!-- Generalization Videos -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Qualitative Results and Ablation</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+
+            <div class="content has-text-justified">
+              <p>
+
+                <br>
+              </p>
+              <div class="columns is-centered">
+                <img src="./static/images/plot.png" width="900" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+  </section>
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container is-max-widescreen">
+        <!-- Overview -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3"></h2>
+            <div class="content has-text-justified">
+              <p>
+                We conduct ablation studies to highlight the effectiveness of various components in
+                HF-Fed. "†" and "‡" denote imaging
+                networks without and with the hypernetwork, respectively, showing the significant role of the
+                hypernetwork in improving imaging performance by addressing
+                domain gap issues. Further, we evaluate our learning strategy by aggregating
+                only the hypernetwork in rounds labeled "HF-Fed ♢," addressing the challenge
+                of heterogeneous scanning parameters. Additional experiments explore the modulation scope of the
+                hypernetwork, where "HF-Fed ⋆" and "HF-Fed ◦" scenarios
+                focus on encoder and decoder modulation, respectively. Figure 2 shows the boxplots of PSNR based on w/o
+                FL, FedAvg, FedProx, FedBN. Ditto, pFedHN, and
+                HF-Fed for the postprocessing task. Results suggest similar performances across
+                all modulation scenarios, indicating the effectiveness of modulating all layers for
+                consistency and generality
+              </p>
+            </div>
+          </div>
+        </div class="columns is-centered">
+        <!--/ Overview -->
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <div class="content has-text-justified">
+              <p>
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="columns is-centered">
+
+        </div>
+
+
+
+      </div>
+  </section>
+
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{ashraf2024dmastermaskannealedtransformer,
+        title={D-MASTER: Mask Annealed Transformer for Unsupervised Domain Adaptation in Breast Cancer Detection from Mammograms}, 
+        author={Tajamul Ashraf and Krithika Rangarajan and Mohit Gambhir and Richa Gabha and Chetan Arora},
+        year={2024},
+        eprint={2407.06585},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2407.06585}, 
+  }</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="content">
+          <p>
+            Website template is inspired from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
