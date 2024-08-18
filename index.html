@@ -75,12 +75,12 @@ Federated Learning</h1>
                                     </div>
                                     <div class="is-size-5 publication-authors">
                                         <span class="author-block"><sup>1</sup>Indian Institute of Technology Delhi,</span>
-                                        <span class="author-block"><sup>1</sup>National Institute of Technology Delhi,</span>
+                                        <span class="author-block"><sup>2</sup>National Institute of Technology Delhi,</span>
                                     </div>
                                 </div>
                                 <div class="publication-links">
                                     <span class="link-block">
-                                        <a href="https://arxiv.org/abs/2407.06585v1" class="external-link button is-normal is-rounded is-dark">
+                                        <a href="https://openaccess.thecvf.com/content/WACV2024/papers/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.pdf" class="external-link button is-normal is-rounded is-dark">
                                             <span class="icon">
                                                 <i class="fas fa-file-pdf"></i>
                                             </span>
@@ -135,21 +135,21 @@ Federated Learning</h1>
               <p>
                 Federated learning has emerged as a promising
 paradigm for collaborative machine learning, enabling
-multiple clients to train a model while preserving data privacy jointly. Tailored federated learning takes this concept
-further by accommodating client heterogeneity and facilitating the learning of personalized models. While the utilization of transformers within federated learning has attracted significant interest, there remains a need to investigate the effects of federated learning algorithms on the latest focal modulation-based transformers. In this paper, we
-investigate this relationship and uncover the detrimental effects of federated averaging (FedAvg) algorithms on Focal
+multiple clients to train a model while preserving data privacy jointly. Tailored federated learning takes this concept
+further by accommodating client heterogeneity and facilitating the learning of personalized models. While the utilization of transformers within federated learning has attracted significant interest, there remains a need to investigate the effects of federated learning algorithms on the latest focal modulation-based transformers. In this paper, we
+investigate this relationship and uncover the detrimental effects of federated averaging (FedAvg) algorithms on Focal
 Modulation, particularly in scenarios with heterogeneous
 data. To address this challenge, we propose TransFed, a
 novel transformer-based federated learning framework that
-not only aggregates model parameters but also learns tailored Focal Modulation for each client. Instead of employing a conventional customization mechanism that maintains client-specific focal modulation layers locally, we introduce a learn-to-tailor approach that fosters client collaboration, enhancing scalability and adaptation in TransFed.
-Our method incorporates a hyper network on the server, responsible for learning personalized projection matrices for
+not only aggregates model parameters but also learns tailored Focal Modulation for each client. Instead of employing a conventional customization mechanism that maintains client-specific focal modulation layers locally, we introduce a learn-to-tailor approach that fosters client collaboration, enhancing scalability and adaptation in TransFed.
+Our method incorporates a hyper network on the server, responsible for learning personalized projection matrices for
 the focal modulation layers. This enables the generation
 of client-specific keys, values, and queries.Furthermore, we
-provide an analysis of adaptation bounds for TransFed using the learn-to-customize mechanism. Through intensive
-experiments on datasets related to pneumonia classification, we demonstrate that TransFed, in combination with the
+provide an analysis of adaptation bounds for TransFed using the learn-to-customize mechanism. Through intensive
+experiments on datasets related to pneumonia classification, we demonstrate that TransFed, in combination with the
 learn-to-tailor approach, achieves superior performance in
-scenarios with non-IID data distributions, surpassing existing methods. Overall, TransFed paves the way for leveraging focal Modulation in federated learning, advancing the
-capabilities of focal modulated transformer models in decentralized environments</p>
+scenarios with non-IID data distributions, surpassing existing methods. Overall, TransFed paves the way for leveraging focal Modulation in federated learning, advancing the
+capabilities of focal modulated transformer models in decentralized environments</p>
             </div>
           </div>
         </div>
@@ -167,10 +167,10 @@ capabilities of focal modulated transformer models in decentralized environment
           <h2 class="title is-3"><b>Trans-Fed</b> Architecture</h2>
           <div class="content has-text-justified">
             <p>
-              We introduce TransFed, an innovative federated learning framework built upon Focal modulation architecture. TransFed directly addresses the limitations of
-FedAvg when applied to focal modulation in heterogeneous data scenarios. By facilitating the customization
+              We introduce TransFed, an innovative federated learning framework built upon Focal modulation architecture. TransFed directly addresses the limitations of
+FedAvg when applied to focal modulation in heterogeneous data scenarios. By facilitating the customization
 of focal modulation for individual clients, TransFed significantly improves performance within the context
-of tailored federated learning. Our proposal introduces a learn-to-tailor concept to enhance the utilization of client cooperation in the tailored layers. This mechanism aims to improve the
+of tailored federated learning. Our proposal introduces a learn-to-tailor concept to enhance the utilization of client cooperation in the tailored layers. This mechanism aims to improve the
 scalability and adaptation capabilities of TransFed.<br>
               <br>
             </p>
@@ -190,15 +190,15 @@ scalability and adaptation capabilities of TransFed.<br>
         <!-- Overview -->
         <div class="columns is-centered has-text-centered">
           <div class="column is-full-width">
-            <h2 class="title is-3">Network of Networks (NoN)</h2>
+            <h2 class="title is-3">TransFed Algorithm</h2>
             <div class="content has-text-justified">
               <p>
-                In this paper, we
-investigate this relationship and uncover the detrimental effects of federated averaging (FedAvg) algorithms on Focal
-Modulation, particularly in scenarios with heterogeneous
-data. To address this challenge, we propose TransFed, a
-novel transformer-based federated learning framework that
-not only aggregates model parameters but also learns tailored Focal Modulation for each client. 
+
+                <div class="columns is-centered">
+                  <img src="./static/images/algorithm.png" width="400" />
+                </div> 
+
+                
               </p>
             </div>
           </div>
@@ -230,16 +230,11 @@ not only aggregates model parameters but also learns tailored Focal Modulation 
           <div class="column is-full-width">
             <h3 class="title is-4"></h3>
             <div class="columns is-centered">
-              <img src="./static/images/table1.png" width="900" />
+              <img src="./static/images/table.png" width="1000" />
             </div>
             <div class="content has-text-justified">
-              <P>Table 1 demonstrates that FL-based methods significantly improve
-                performance with larger datasets, mitigating the non-iid problem. HF-Fed consistently delivers high
-                performance across different dataset sizes, enhancing imaging quality effectively. All methods benefit
-                from larger training samples, with
-                HF-Fed remaining competitive. Our hypernetwork uses X-Ray geometry parameters to modulate feature maps,
-                balancing stability and imaging performance,
-                proving effective in achieving consistent and competitive result
+              <P>Table 2. demonstrates The TransFed method’s average test accuracy is computed alongside that of multiple transformer-based approaches, encompassing
+different non-IID scenarios.
               </P>
 
 
@@ -278,7 +273,8 @@ not only aggregates model parameters but also learns tailored Focal Modulation 
                 <br>
               </p>
               <div class="columns is-centered">
-                <img src="./static/images/plot.png" width="900" />
+                <img src="./static/images/Ablation.png" width="400" />
+              </div>
               </div>
             </div>
           </div>
@@ -296,20 +292,7 @@ not only aggregates model parameters but also learns tailored Focal Modulation 
             <h2 class="title is-3"></h2>
             <div class="content has-text-justified">
               <p>
-                We conducted experiments on RSNA and Kermany datasets, varying the parameter alpha of the Beta distribution. Smaller alpha values indicate a higher level of heterogeneity. TransFed consistently outperformed benchmark
-methods (FedAvg-T, FedBN [16], and pFedHN [9]) in handling label distribution heterogeneity. It demonstrated robustness even when other methods struggled to utilize client
-heterogeneity effectively. We also explored the impact of
-noise-induced feature imbalance on TransFed. By adding
-Gaussian noise with increasing levels to each client, we
-assessed TransFed’s performance. It consistently outperformed other methods in handling client-specific noise. The
-number of focal-modulation blocks in TransFed was investigated, showing that increasing the number improved the
-model’s ability to capture data heterogeneity and enhance
-overall performance (Table 3). Consequently, we selected
-eight as the default attention block number for TransFed in
-subsequent experiments. We examined the impact of the
-number of participating clients on model performance by
-varying the sample rate. TransFed exhibited greater stability than FedAvg-T, as shown in Figure 3. This highlights
-the robustness of TransFed in handling different client participation rates.
+                
               </p>
             </div>
           </div>
