@@ -55,7 +55,8 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column has-text-centered">
-                    <h1 class="title is-1 publication-title"><b>HF-Fed</b>: Hierarchical Based Customized Federated Learning Framework for X-Ray Imaging</h1>
+                    <h1 class="title is-1 publication-title"><b>TransFed:</b>: A way to epitomize Focal Modulation using Transformer-based
+Federated Learning</h1>
                     <h3 class="title is-4 conference-authors">
                         <div class="logo-container">
                             <a target="_blank" href="https://conferences.miccai.org/2024/en/">
@@ -67,7 +68,9 @@
                                         <span class="author-block">
                                             <a href="https://www.tajamulashraf.com/">Tajamul Ashraf</a><sup>1</sup>,</span>
                                         <span class="author-block">
-                                            <a href="https://www.linkedin.com/in/tisha-madame/?originalSubdomain=in">Tisha Madame</a><sup>1</sup>,
+                                            <a href="https://www.linkedin.com/in/fuzayil-mir/">Fuzayil Bin Afzal Mir</a><sup>1</sup>,
+                                        </span>
+                                            <a href="https://sites.google.com/nitsri.net/iqraaltaf">Iqra Altaf Gillani</a><sup>1</sup>,
                                         </span>
                                     </div>
                                     <div class="is-size-5 publication-authors">
@@ -129,31 +132,23 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                In clinical applications, <b>X-Ray</b> technology plays a crucial
-                role in noninvasive examinations like mammography, providing essential anatomical information about
-                patients. However, the inherent radiation risk associated with X-Ray procedures raises significant
-                concerns.
-                <b>X-Ray</b> reconstruction is crucial in medical imaging for creating detailed
-                visual representations of internal structures, and facilitating diagnosis
-                and treatment without invasive procedures. Recent advancements in deep
-                learning (<b>DL</b>) have shown promise in <b>X-Ray</b> reconstruction. Nevertheless,
-                conventional DL methods often necessitate the centralized aggregation of
-                substantial large datasets for training, following specific scanning protocols. This requirement
-                results in notable domain shifts and privacy issues.
-                To address these challenges, we introduce the Hierarchical Framework based Federated Learning method
-                (HF-Fed) for customized <b>X-Ray</b> Imaging. <b>HF-Fed</b> addresses the challenges in X-Ray imaging optimization by
-                decomposing the problem into two components: local data adaptation
-                and holistic X-Ray Imaging. It employs a hospital-specific hierarchical
-                framework and a shared common imaging network called Network of
-                Networks (<b>NoN</b>) for these tasks. The emphasis of the NoN is on acquiring
-                stable features from a variety of data distributions. A hierarchical hypernetwork extracts
-                domain-specific hyperparameters, conditioning the NoN
-                for customized X-Ray reconstruction. Experimental results demonstrate
-              <b>HF-Fed’s</b> competitive performance, offering a promising solution for enhancing X-Ray imaging without the
-                need for data sharing. This study
-                significantly contributes to the evolving body of literature on the potential advantages of federated
-                learning in the healthcare sector. It offers
-                valuable insights for policymakers and healthcare providers holistically</p>
+                Federated learning has emerged as a promising
+paradigm for collaborative machine learning, enabling
+multiple clients to train a model while preserving data privacy jointly. Tailored federated learning takes this concept
+further by accommodating client heterogeneity and facilitating the learning of personalized models. While the utilization of transformers within federated learning has attracted significant interest, there remains a need to investigate the effects of federated learning algorithms on the latest focal modulation-based transformers. In this paper, we
+investigate this relationship and uncover the detrimental effects of federated averaging (FedAvg) algorithms on Focal
+Modulation, particularly in scenarios with heterogeneous
+data. To address this challenge, we propose TransFed, a
+novel transformer-based federated learning framework that
+not only aggregates model parameters but also learns tailored Focal Modulation for each client. Instead of employing a conventional customization mechanism that maintains client-specific focal modulation layers locally, we introduce a learn-to-tailor approach that fosters client collaboration, enhancing scalability and adaptation in TransFed.
+Our method incorporates a hyper network on the server, responsible for learning personalized projection matrices for
+the focal modulation layers. This enables the generation
+of client-specific keys, values, and queries.Furthermore, we
+provide an analysis of adaptation bounds for TransFed using the learn-to-customize mechanism. Through intensive
+experiments on datasets related to pneumonia classification, we demonstrate that TransFed, in combination with the
+learn-to-tailor approach, achieves superior performance in
+scenarios with non-IID data distributions, surpassing existing methods. Overall, TransFed paves the way for leveraging focal Modulation in federated learning, advancing the
+capabilities of focal modulated transformer models in decentralized environments</p>
             </div>
           </div>
         </div>
@@ -171,15 +166,11 @@
           <h2 class="title is-3"><b>HF-Fed</b> Architecture</h2>
           <div class="content has-text-justified">
             <p>
-              We introduce the Hierarchical Framework based Federated Learning method (HF-Fed) for customized X-Ray
-              Imaging. HF-Fed addresses the challenges in X-Ray imaging optimization by
-              decomposing the problem into two components: local data adaptation
-              and holistic X-Ray Imaging. It employs a hospital-specific hierarchical
-              framework and a shared common imaging network called Network of
-              Networks (NoN) for these tasks. The emphasis of the NoN is on acquiring
-              stable features from a variety of data distributions. A hierarchical hypernetwork extracts
-              domain-specific hyperparameters, conditioning the NoN
-              for customized X-Ray reconstruction.<br>
+              We introduce TransFed, an innovative federated learning framework built upon Focal modulation architecture. TransFed directly addresses the limitations of
+FedAvg when applied to focal modulation in heterogeneous data scenarios. By facilitating the customization
+of focal modulation for individual clients, TransFed significantly improves performance within the context
+of tailored federated learning. Our proposal introduces a learn-to-tailor concept to enhance the utilization of client cooperation in the tailored layers. This mechanism aims to improve the
+scalability and adaptation capabilities of TransFed.<br>
               <br>
             </p>
           </div>
@@ -201,15 +192,12 @@
             <h2 class="title is-3">Network of Networks (NoN)</h2>
             <div class="content has-text-justified">
               <p>
-                In this research, we propose HF-Fed, a hypernetwork-based federated learning
-                framework designed to tackle the non-iid challenge in X-Ray image reconstruction. Similar to FedAvg and
-                FedProx, HF-Fed involves local updates for both the
-                hypernetwork and imaging network, with only the imaging network’s updates
-                aggregated on the server. Unlike FedBN, which normalizes data globally, HF-Fed
-                adapts by performing local normalization due to varied X-Ray data distributions from different
-                machines, challenging FedBN’s assumptions [21]. To address
-                this, we introduce a hypernetwork to modulate feature maps within the imaging
-                network, enabling hierarchical-driven self-normalization
+                In this paper, we
+investigate this relationship and uncover the detrimental effects of federated averaging (FedAvg) algorithms on Focal
+Modulation, particularly in scenarios with heterogeneous
+data. To address this challenge, we propose TransFed, a
+novel transformer-based federated learning framework that
+not only aggregates model parameters but also learns tailored Focal Modulation for each client. 
               </p>
             </div>
           </div>
@@ -359,15 +347,13 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{ashraf2024dmastermaskannealedtransformer,
-        title={D-MASTER: Mask Annealed Transformer for Unsupervised Domain Adaptation in Breast Cancer Detection from Mammograms}, 
-        author={Tajamul Ashraf and Krithika Rangarajan and Mohit Gambhir and Richa Gabha and Chetan Arora},
-        year={2024},
-        eprint={2407.06585},
-        archivePrefix={arXiv},
-        primaryClass={cs.CV},
-        url={https://arxiv.org/abs/2407.06585}, 
-  }</code></pre>
+      <pre><code>@inproceedings{ashraf2024transfed,
+  title={TransFed: A way to epitomize Focal Modulation using Transformer-based Federated Learning},
+  author={Ashraf, Tajamul and Bin Afzal Mir, Fuzayil and Gillani, Iqra Altaf},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages={554--563},
+  year={2024}
+}</code></pre>
     </div>
   </section>
 
