@@ -295,19 +295,20 @@ not only aggregates model parameters but also learns tailored Focal Modulation 
             <h2 class="title is-3"></h2>
             <div class="content has-text-justified">
               <p>
-                We conduct ablation studies to highlight the effectiveness of various components in
-                HF-Fed. "†" and "‡" denote imaging
-                networks without and with the hypernetwork, respectively, showing the significant role of the
-                hypernetwork in improving imaging performance by addressing
-                domain gap issues. Further, we evaluate our learning strategy by aggregating
-                only the hypernetwork in rounds labeled "HF-Fed ♢," addressing the challenge
-                of heterogeneous scanning parameters. Additional experiments explore the modulation scope of the
-                hypernetwork, where "HF-Fed ⋆" and "HF-Fed ◦" scenarios
-                focus on encoder and decoder modulation, respectively. Figure 2 shows the boxplots of PSNR based on w/o
-                FL, FedAvg, FedProx, FedBN. Ditto, pFedHN, and
-                HF-Fed for the postprocessing task. Results suggest similar performances across
-                all modulation scenarios, indicating the effectiveness of modulating all layers for
-                consistency and generality
+                We conducted experiments on RSNA and Kermany datasets, varying the parameter alpha of the Beta distribution. Smaller alpha values indicate a higher level of heterogeneity. TransFed consistently outperformed benchmark
+methods (FedAvg-T, FedBN [16], and pFedHN [9]) in handling label distribution heterogeneity. It demonstrated robustness even when other methods struggled to utilize client
+heterogeneity effectively. We also explored the impact of
+noise-induced feature imbalance on TransFed. By adding
+Gaussian noise with increasing levels to each client, we
+assessed TransFed’s performance. It consistently outperformed other methods in handling client-specific noise. The
+number of focal-modulation blocks in TransFed was investigated, showing that increasing the number improved the
+model’s ability to capture data heterogeneity and enhance
+overall performance (Table 3). Consequently, we selected
+eight as the default attention block number for TransFed in
+subsequent experiments. We examined the impact of the
+number of participating clients on model performance by
+varying the sample rate. TransFed exhibited greater stability than FedAvg-T, as shown in Figure 3. This highlights
+the robustness of TransFed in handling different client participation rates.
               </p>
             </div>
           </div>
